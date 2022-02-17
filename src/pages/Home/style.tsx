@@ -12,61 +12,28 @@ export const Container = styled(motion.div)`
   max-width: 1440px;
   min-height: calc(100vh - 120px);
   margin: 0 24px;
+`
+
+export const Main = styled(motion.main)`
   display: flex;
-  position: relative;
+  width: 100%;
+  height: calc(100% - 170px);
 
-  svg{
-    width: 150px;
-    position: absolute;
-    bottom: 60px;
-    right: 60px;
-    path {
-      fill: transparent;
-    }
-    
-    font-size: 60px;
-    font-weight: 900; 
-    text-transform: uppercase;
-    letter-spacing: 21px;
-    fill: black;
-  }
-
-
-  @media(max-width: 1024px){
-    svg{
-      width: 110px;
-      bottom: 20px;
-      right: 20px;
-    }
-  }
-
-  @media(max-width: 540px){
+  @media(max-width: 820px){
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  @media(max-width: 375px){
-    height: calc(100vh + 30px);
-  }
 `
 
 export const ViolinContainer = styled(motion.div)`
   width: 100%;
-  max-width: 400px;
   min-width: 200px;
   height: 100%;
+  min-height: 400px;
   display: flex;
   align-items: center;
-
-  @media(max-width: 425px){
-    align-items: flex-start;
-    justify-content: center;
-    height: 400px;
-  }
-
-  @media(max-width: 320px){
-    height: 350px;
-  }
+  justify-content: center;
 `
 
 export const ViolinBackground = styled(motion.div)`
@@ -113,6 +80,7 @@ export const textContainer = styled(motion.div)`
   span{
     font-size: 120px;
     font-weight: 500;
+    text-align: center;
   }
   
   @media(max-width: 1024px){
@@ -129,14 +97,40 @@ export const textContainer = styled(motion.div)`
     }
   }
 
-  @media(max-width: 425px){
+  @media(max-width: 540px){
     padding: 0;
     align-items: center;
+    span{
+      width: 100%;
+    }
   }
 
   @media(max-width: 375px){
     span{
       font-size: 72px;
     }
+  }
+`
+
+export const Footer = styled(motion.footer)`
+  width: 100%;
+  position: relative;
+  padding-top: 10px;
+  height: 160px;
+
+  svg{
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    path {
+      fill: transparent;
+    }
+
+    font-size: 60px;
+    font-weight: 900; 
+    text-transform: uppercase;
+    letter-spacing: 21px;
+    fill: black;
   }
 `
